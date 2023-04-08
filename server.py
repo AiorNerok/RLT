@@ -28,5 +28,9 @@ class ServerBot:
 
 
 if __name__ == "__main__":
-    dispatcher = ServerBot()
-    executor.start_polling(dispatcher=dispatcher())
+    try:
+        dispatcher = ServerBot()
+        executor.start_polling(dispatcher=dispatcher())
+    except:
+        dispatcher = ServerBot()
+        executor.start_polling(dispatcher=dispatcher())
